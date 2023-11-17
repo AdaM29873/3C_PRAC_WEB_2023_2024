@@ -1,0 +1,4 @@
+Switch jest lepszy od ifa gdy mamy wiele opcji wyboru, ponieważ:
+- jest bardziej przejrzysty kod,
+- nie trzeba co chwile pisac warunku( krócej zajmuj napisanie kodu),
+- kod jest może być bardziejwydajniejszy gdy używasz switch w wielu opcjach
