@@ -1,0 +1,3 @@
+Przedewszystkim pętle pomagają programistą w tym by nie popełniać błędu DRY, chociaż i z nimi 
+można napisać kod który się bedzie powtarzał to napewno w jakimś stopniu niwelują ten problem,
+pętle w dobrym uzyciu bardzo zaoszczędzą nam czas i pozwolą pisać nam progrsmy które zajęły by wiele czasu a i tak mogłyby nie być skończone
