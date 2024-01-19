@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <title>
+            Formularz zgłoszeniowy Śniadek
+        </title>
+        <meta charset="UTF-8">
+        <style>
+            #reset
+            {
+                margin: 2%;
+                float: right;
+            }
+            #wyb
+            {
+                font-size: larger;
+                color: black;
+                text-align: center;
+            }
+            #mainFont{
+                font-size: 200%;
+                font-style: inherit;
+                color: black;
+                text-align: center;
+            }
+            #main
+            {
+                text-align: center;
+                width: 100%;
+                height: 20%;
+            }
+            #left
+            {
+                float: left;
+                text-align: left;
+                width:100% ;
+                background-color: azure;
+                text-align: center;
+            }
+            #regulamin
+            {
+            }
+            #sent{
+                float: right;
+                margin: 2%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="http://localhost/egzamin_php/form_zad.php" method="post">
+            <div id="main">
+                <p id="mainFont">Formularz zgłoszeń do szkoły:</p>
+                płeć:<br>
+                <select name="plec"> 
+                    <option value="chlopak">Chłopak</option>
+                    <option value="dziewczyna">Dziewczyna</option>
+                </select>
+                <br> Nazwisko: <br>
+                <input type="text" name="nazw" value="" size="30">
+                <br> Imię: <br>
+                <input type="text" name="imie" value="" size="20">
+                <br> nr pesel: <br>
+                <input type="number" name="pesel" value="" size="20">
+                <br> Poczta elektroniczna (adres): <br>
+                <input type="text" name="mail" value="" size="30">
+                <br> numer telefonu: <br>
+                <input type="number" name="telefon" value="" size="20">
+                <br> adres zamieszkania (ulica z numerem) <br>
+                <input type="text" name="adres" value="" size="30">
+            </div>
+            <div id="left">
+                <p id="wyb">Wybór kierunku:</p>
+                <br>
+                <input type="radio" value="mat-fiz" name="kierunek" checked> mat-fiz<br>
+                <input type="radio" value="biol-chem" name="kierunek" > biol-chem<br>
+                <input type="radio" value="human" name="kierunek" > human<br>
+                <div id="regulamin">
+                    <p> Akceptacja regulaminu szkoly</p>
+                    <input type="checkbox" checked>
+                </div>
+                <input id="reset" type="reset" value="wyczyść"  name="wyczyść">
+                <input id="sent"type="submit" vaLUE="wyslij" name="wyslij">
+            </div>
+        </form>
+
+    </body>
+</html>
