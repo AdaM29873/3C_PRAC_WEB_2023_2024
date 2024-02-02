@@ -1,5 +1,0 @@
-adres prophp.pl
-używana metoda wysyłąnia POST
-rozszerzenie pliku pzechowujace dane php
-typ pól w form 
-liczba pol w form
