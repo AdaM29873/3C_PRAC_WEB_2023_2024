@@ -1,0 +1,5 @@
+adres prophp.pl
+używana metoda wysyłąnia POST
+rozszerzenie pliku pzechowujace dane php
+typ pól w form  text,password,number
+liczba pol w form 6
