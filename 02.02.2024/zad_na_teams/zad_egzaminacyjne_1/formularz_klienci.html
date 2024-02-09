@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+    <head>
+        <title>
+            Formularz dla chętnych
+        </title>
+        <meta charset="UTF-8">
+        <style>
+            #mainFont
+            {
+                font-size: large;
+            }
+            body
+            {
+                text-align: center;
+            }
+        </style>
+    </head>
+
+    <body>
+        <form action="http://localhost/ZAD_EGZAMINACYJNE_1/formularz_klienci.php" method="POST">
+                <p id="mainFont">Dobrowolny formularz:</p>
+                Podaj płeć:<br>
+                <select name="plec"> 
+                    <option value="chlopak">Chłopak</option>
+                    <option value="dziewczyna">Dziewczyna</option>
+                </select>
+                <br>rok urodzenia: <br>
+                <input type="number" name="rok_urodzenia" value="">
+                <br>Uwagi: <br>
+                <textarea name="uwagi" maxlength="100"></textarea>   
+                <p> Akceptacja regulaminu formularza</p>
+                <input type="checkbox" checked required>
+                <input id="reset" type="reset" value="wyczyść"  name="wyczyść">
+                <input id="sent"type="submit" value="wyslij" name="wyslij">
+        </form>
+
+    </body>
+</html>
