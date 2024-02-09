@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>BMI licznik</title>
+    <meta charset="UTF-8">
+    <style>
+        #mainFont
+        {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+<form action="zad_bmi.php" method="POST">
+    <p id="mainFont">Podaj dane potrzebne do BMI:</p>
+    <p>Wiek</p>
+    <input type="number" value="wiek" name="age">
+    <br>
+    <p>Waga w kg</p>
+    <input type="number" value="waga" name="weight" ne>
+    <br><p>Wzrost w cm</p>
+    <input type="number" value="wzrost" name="height">
+    <br><br>
+    <input id="sent" type="submit" value="wyslij">
+    <input type="reset" value="wyczysc">
+</form>
+</body>
+</html>
