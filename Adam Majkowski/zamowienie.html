@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+<head>
+    <title>Fabryka cukierków</title>
+    <link rel="stylesheet" href="styl10.css">
+    <script>
+        function Order()
+        {
+            var shapeNumber = document.getElementById("shapeNumber").value;
+          
+            switch(shapeNumber)
+            {
+                case "1":
+                    document.getElementById("resultShape").innerHTML = "Twoje zamówienie to cukierek cytryna";
+                    break;
+                case "2":
+                    document.getElementById("resultShape").innerHTML = "Twoje zamówienie to cukierek liść";
+                    break;
+                case "3":
+                    document.getElementById("resultShape").innerHTML = "Twoje zamówienie to cukierek banan";
+                    break;
+                default: document.getElementById("resultShape").innerHTML = "Twoje zamówienie to cukierek inne";
+                    break;
+            }  
+        }
+        function backColor()
+        {
+            var R = document.getElementById("R").value;
+            var G = document.getElementById("G").value;
+            var B = document.getElementById("B").value;
+
+            document.getElementById("colorB").style = "background-color: rgb(" +R+","+G+","+B+");";
+        }
+    </script>
+</head>
+<body>
+    <section id="topLeft">
+        <a href="zamowienie.html" class="order">Zamów cukierki</a>
+    </section>
+    <section id="topRight">
+        <a href="index.html"><img src="logotyp.png" alt="Nasze logo" ></a>
+    </section>
+    <section id="banner">
+        <h1>Strefa Zamówień</h1>
+    </section>
+    <section id="mainLeft">
+        <a>Numer kształtu:</a><br>
+        <input type="number" id="shapeNumber"><br>
+        <a>Skomponuj swój kolor, podaj RGB: </a><br>
+        <a>R:</a><input type="number" id="R"><a>G:</a><input type="number"id="G"><a>B:</a><input type="number"id="B"><br>
+        <input type="submit" value="Zamówienie" onclick="Order()">
+        <br/>
+        <br/>
+        <a id="resultShape">Twoje zamówienie</a>
+        <br/>
+        <button id ="colorB" onclick="backColor()">Kolor</button>
+    </section>
+    <section id="mainRight">
+        <h2>Nasza oferta</h2>
+       <table>
+           <tr>
+                <td>Kształty</td><td rowspan="2">Możesz zamówić<br> dowolny kolor cukierka</td>
+           </tr>
+                <td>
+                    <ol>
+                        <li>cytryna</li><li>liść</li><li>banan</li>
+                    </ol>
+                </td>
+       </table>
+    </section>
+    <footer>
+        <a>Autor: <b>Adam Majowski</b></a>
+    </footer>
+</body>
+</html>
