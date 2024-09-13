@@ -1,0 +1,57 @@
+<!DOCTYPE html>`
+<html lang="PL-pl">
+<head>
+    <title>Style w JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div id="left">
+            <h1>Przyciski javaScript</h1> <br>
+            <p>Podaj kolor tła</p>
+            <button onclick="red()"id="red">Red</button>
+            <button onclick="bisq()"id="bisq">Bisque</button>
+            <p>Podaj kolor czcionki</p>
+            <select onchange="FontColor()" id="color">
+                <option value="black">czarny</option>
+                <option value="red">Czerwony</option>
+            </select>
+            <p>Podaj rozmiar czcionki w procentach</p>
+            <input type="text" value="100%" id="fontSize" onchange="Size()">
+        </div>
+        <div id="body">
+            <p id="right">Makłowicz to legenda</p>
+        </div>
+    </section>
+    <button type="reset" onclick="reset()">Wyczyść</button>
+    </div>
+
+    <script>
+        function red()
+        {
+            document.body.style.backgroundColor = "red";
+        }
+        function bisq()
+        {
+            document.body.style.backgroundColor = "bisque";
+        }
+        function FontColor()
+        {
+            let color = document.getElementById("color").value;
+            document.getElementById("right").style.color = color;
+        }
+        function Size()
+        {
+            let size = document.getElementById("fontSize").value;
+            document.getElementById("right").style.fontSize = size;
+        }
+        function reset()
+        {
+            document.getElementById("fontSize").value ="100%";
+            document.getElementById("color").value ="black";
+            document.body.style.backgroundColor ="bisque";
+            document.getElementById("body").color ="black";
+        }
+    </script>
+</body>
+</html> 
