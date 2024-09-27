@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="PL-pl">
+<head>
+    <title>Moje portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="header">
+        <h1 id="header__tittle">Moje portfolio</h1>
+    </section>
+
+   <section class="container">
+        <section class="left">
+            <nav class="left__nav">
+                <a href="#kontakt" class="nav_link">Kontakt</a>
+            </nav>
+            <p id="fontSize">Podaj kolor czcionki</p>
+            <select class="colorType"onchange="FontColor()" id="color">
+                <option class="colorType__black" value="black">czarny</option>
+                <option class="colorType__red" value="red">Czerwony</option>
+            </select>
+            <br><br><br><br><br><br><br>
+            <p class="left__paragraph">
+                Witam, zaloguj się
+            </p>
+            <form class="login">
+                <input class="login__input" type="text" placeholder="e-mail">
+                <input class="login__input  login__input--password" type="password" placeholder="hasło">
+                <button type="submit">Wyślij</button>
+                <br>
+            </form>
+            <br><br><br><br><br><br>
+            <section id="kontakt"class="kontakt">
+                <form class="kontakt__form">
+                <button type="submit">Wyślij mail'a</button>
+                <input class="kontakt__form kontakt__form--temat" type="text" placeholder="temat">
+                <input class="kontakt__form kontakt__form--treść" type="text" placeholder="treść">
+                </form>
+            </section>
+        </section>
+        <section class="main">
+            <p class="main__paragraph">
+                Witam  Państwa tu serdecznie,nazywam się Wiktor Rutkowski,
+                pochodze z NYC, mam 29 lat, uwielbiam jeść babcine obiadki 
+                na czas oraz okazywać żonie dominacje - rekord 20-0, 
+                <br>
+                PS 
+                <br>
+                wszystie walki zakończone przed czasem
+            </p>
+        </section>
+    </section> 
+    <section id="footer">
+        <section class="footer__endOfSite">
+            <p class="footer__endOfSite footer__endOfSite--text">Dziękuje za odzwiedzenie strony</p>
+        </section>
+
+    <script>
+        function FontColor()
+        {
+            let color = document.getElementById("color").value;
+            document.getElementById("header__tittle").style.color = color;
+        }
+    </script>
+</body>
+</html> 
