@@ -1,0 +1,53 @@
+body{
+    text-align: center;
+    
+}
+fieldset{
+    border-radius: 2%;
+    max-width: 40%;
+    max-height: 50%;
+    margin-left: 30%;
+    margin-right: 30%;
+    margin-top: 3%;
+}
+.main__submit__button
+{
+    background-color:  rgb(28, 137, 141);
+    border-radius: 4%;
+    min-height: auto;
+    margin-top: -6%;
+    min-width: 40%;
+}
+legend
+{
+    font-size: xx-large;
+    color: rgb(28, 137, 141);
+}
+.form__toKind__option:hover{
+    color: rgb(28, 137, 141);
+    min-width: 30%;
+}
+.form__toKind{
+    text-align: left;
+    margin-left: 5%;
+}
+
+.form{
+    text-align: left;
+    font-size: medium;
+    font-weight: 300;
+}
+.main__submit__result
+{
+    font-weight: 700;
+    text-align: left;
+    margin-left: 30%;
+}
+.form__toKind
+{
+    margin-top: 2%;
+}
+.form__toKind__option
+{
+    font-weight: 700;
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+  <head>
+        <link rel="stylesheet" href="kantorek.css">
+        <meta charset="utf-8">
+        <title>Kantorek</title>
+    </head>
+  <body>
+    <section class="main">
+        <section class="main">
+            <fieldset>
+                <legend>Kantor Walut</legend>
+                <section class="form">
+                    <b>Kwota*:</b>
+                    <input type="number"class="form__input" id="howMany"/>
+                    <select class="form__selectKind" id="kind">
+                        <option>PLN</option>
+                        <option>USD</option>
+                        <option>GBP</option>
+                        <option>EUR</option>
+                        <option>CHF</option>
+                    </select>
+                    <br>
+                    <p>* - pole wymagane</p>
+                    <p>Wybierz walutę docelową:</p>
+                    <div class="form__toKind">
+                        <label class="form__toKind__option"><input type="radio" name="form__toKind" id="first">PLN</label><br>
+                        <label class="form__toKind__option"><input type="radio"  name="form__toKind" id="second">USD</label><br>
+                        <label class="form__toKind__option"><input type="radio"  name="form__toKind" id="third">GBP</label><br>
+                        <label class="form__toKind__option"><input type="radio" name="form__toKind" id="fourth">EUR</label><br>
+                        <label class="form__toKind__option"><input type="radio" name="form__toKind" id="fiveth">CHF</label><br>
+                    </div>
+                </section>
+            </fieldset>
+            <br>
+            <section class="main__submit">
+                <button type="submit" onclick="start()" class="main__submit__button">PRZELICZ</button>
+                <div class="main__submit__result"id="result">
+                    <p>Otrzymasz:</p>
+                </div>
+            </section> 
+        </section>
+    </section>
+    <section class="footer">
+      
+    </section>
+    
+    <script>
+    function start()
+    {   
+
+        const kursy = {
+            PLN: 1,
+            USD: 4.20, 
+            GBP: 5.10, 
+            EUR: 4.60, 
+            CHF: 4.40  
+        };
+
+        
+        const kwota = parseFloat(document.getElementById("howMany").value);
+        const walutaZ = document.getElementById("kind").value;
+        if(document.getElementById("first").checked == true)
+        {
+            const toKind = 1;
+        }
+        elseif(document.getElementById("second").checked == true)
+        {
+            const toKind = 4.20;
+        }
+        elseif(document.getElementById("third").checked == true)
+        {
+            const toKind = 5.10;
+        }
+        elseif(document.getElementById("fourth").checked == true)
+        {
+            const toKind = 4.60;
+        }
+        elseif(document.getElementById("fiveth").checked == true)
+        {
+            const toKind = 4.40;
+        }
+        else
+        {
+            alert("Wybierz walutę docelową!");
+        }
+
+        const kursZ = kursy[walutaZ];
+        const kursNa = kursy[walutaNa];
+
+        const wynik = (kwota / kursZ) * kursNa;
+        document.getElementById("result").innerHTML = `<p>Otrzymasz: ${wynik.toFixed(2)} ${walutaNa}</p>`;
+        
+    }
+    </script>
+  </body>
+</html>
